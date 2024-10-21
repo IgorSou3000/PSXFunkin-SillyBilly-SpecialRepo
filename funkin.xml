@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Defines the ISO project -->
+<iso_project image_name="funkin.bin" cue_sheet="funkin.cue" no_xa="0">
+	<!-- Data track -->
+	<track type="data">
+		<!-- Identifiers -->
+		<identifiers
+			system        = "PLAYSTATION"
+			application   = "PLAYSTATION"
+			volume        = "PSXFUNKIN"
+			volume_set    = "PSXFUNKIN"
+			publisher     = "CUCKYDEV"
+			copyright     = "NINJAMUFFIN99"
+		/>
+		<license file="licensea.dat"/>
+		
+		<!-- Data directory tree -->
+		<directory_tree>
+			<!-- System -->
+			<file name = "system.cnf" type = "data" source = "iso/system.cnf"/>
+			<file name = "SCUS_540.21" type = "data" source = "funkin.ps-exe"/>
+			<file name = "save16.tim" type = "data" source = "iso/save16.tim"/>
+			
+			<!-- Menu assets -->
+			<dir name = "menu">
+				<file name = "loading.tim" type = "data" source = "iso/images/loading.tim"/>
+				<file name = "menu.arc" type = "data" source = "iso/images/menu/menu.arc"/>
+			</dir>
+			
+			<!-- Fonts -->
+			<dir name = "font">
+				<file name = "fonts.tim" type = "data" source = "iso/images/fonts.tim"/>
+			</dir>
+			
+			<!-- Stage assets -->
+			<dir name = "hud">
+				<file name = "hud0.tim" type = "data" source = "iso/images/hud0.tim"/>
+				<file name = "hud1.tim" type = "data" source = "iso/images/hud1.tim"/>
+				<file name = "intro.tim" type = "data" source = "iso/images/intro.tim"/>
+			</dir>
+			
+			<!-- Week1 assets -->
+			<dir name = "week1">
+				<!-- Background art -->
+				<file name = "back.arc" type = "data" source = "iso/images/stages/week1/back.arc"/>
+				
+				<file name = "1.1e.cht" type = "data" source = "iso/data/songs/silly-billy/silly-billy.cht"/>
+				<file name = "1.1n.cht" type = "data" source = "iso/data/songs/silly-billy/silly-billy.cht"/>
+				<file name = "1.1h.cht" type = "data" source = "iso/data/songs/silly-billy/silly-billy.cht"/>
+			</dir>
+			<!-- Character assets -->
+			<dir name = "char">
+				<!-- Boyfriend assets -->
+				<file name = "bf.chr" type = "data" source = "iso/data/characters/bf.chr"/>
+				<file name = "bf.arc" type = "data" source = "iso/images/characters/bf/main.arc"/>
+				<file name = "bfdead.tim" type = "data" source = "iso/images/characters/bf/dead.tim"/>
+			
+				<!-- Dad assets -->
+				<file name = "dad.chr" type = "data" source = "iso/data/characters/dad.chr"/>
+				<file name = "dad.arc" type = "data" source = "iso/images/characters/dad/main.arc"/>
+
+				<!-- Girlfriend assets -->
+				<file name = "gf.chr" type = "data" source = "iso/data/characters/gf.chr"/>
+				<file name = "gf.arc" type = "data" source = "iso/images/characters/gf/main.arc"/>
+				<file name = "speaker.tim" type = "data" source = "iso/images/characters/speaker.tim"/>
+			</dir>
+
+			<!-- Sounds effects -->
+			<dir name = "sounds">
+				<!-- Menu Sounds -->
+				<file name = "scroll.vag" type = "data" source = "iso/sounds/scrollMenu.vag"/>
+				<file name = "confirm.vag" type = "data" source = "iso/sounds/confirmMenu.vag"/>
+				<file name = "cancel.vag" type = "data" source = "iso/sounds/cancelMenu.vag"/>
+
+				<!-- Stage Sounds -->
+				<file name = "intro3.vag" type = "data" source = "iso/sounds/intro3.vag"/>
+				<file name = "intro2.vag" type = "data" source = "iso/sounds/intro2.vag"/>
+				<file name = "intro1.vag" type = "data" source = "iso/sounds/intro1.vag"/>
+				<file name = "intro0.vag" type = "data" source = "iso/sounds/introGo.vag"/>
+			</dir>
+
+			<!-- Videos -->
+			<dir name = "str">
+				<!-- Silly Billy -->
+				<file name = "intro.str" type = "str" source = "iso/videos/intro.str"/>
+				<file name = "myway.str" type = "str" source = "iso/videos/MY-WAY.str"/>
+			</dir>
+
+			<!-- Songs -->
+			<dir name = "songs">
+				<file name = "menu.mus" type = "xa" source = "iso/songs/menu.mus"/>
+				<file name = "week1a.mus" type = "xa" source = "iso/songs/week1a.mus"/>
+			</dir>
+			
+			<!-- Dummy sectors -->
+			<dummy sectors="1024"/>
+		</directory_tree>
+	</track>
+</iso_project>

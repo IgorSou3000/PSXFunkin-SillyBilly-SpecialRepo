@@ -1,0 +1,53 @@
+# Exclude files that shouldn't be included
+do.sh
+pcsx.json
+memcard1.mcd
+memcard2.mcd
+license*.dat
+mips/psyq/
+
+# Exclude executable files
+*.cue
+*.elf
+*.bin
+*.map
+*.ps-exe
+*.exe
+tools/funkinisopak/funkinisopak
+tools/funkinarcpak/funkinarcpak
+tools/funkinchtpak/funkinchtpak
+tools/funkinchrpak/funkinchrpak
+tools/funkintimpak/funkintimpak
+tools/psxavenc/psxavenc
+tools/xainterleave/xainterleave
+
+# Exclude object and link files
+obj/
+bin/
+!bin/index.html
+!bin/README.txt
+*.o
+*.dep
+
+# Exclude CMake build directory
+build/
+
+# Exclude converted assets
+*.tim
+*.arc
+*.xa
+*.mus
+*.cht
+*.chr
+*.vag
+*.str
+
+# Don't remove these bitch
+!makefile.cht
+!makefile.chr
+!makefile.tim
+!makefile.xa
+!makefile.vag
+!makefile.str
+
+# Big Chungus

@@ -1,0 +1,39 @@
+all: \
+	iso/save16.tim \
+	iso/images/menu/menu.arc \
+	iso/images/loading.tim \
+	iso/images/fonts.tim \
+	iso/images/hud0.tim \
+	iso/images/hud1.tim \
+	iso/images/intro.tim \
+	iso/images/characters/bf/main.arc \
+	iso/images/characters/bf/dead.tim \
+	iso/images/characters/dad/main.arc \
+	iso/images/characters/gf/main.arc \
+	iso/images/characters/speaker.tim \
+	iso/images/stages/week1/back.arc \
+
+iso/%.tim: iso/%.png
+	tools/funkintimpak/funkintimpak $@ $<
+
+iso/images/%.arc:
+	tools/funkinarcpak/funkinarcpak $@ $^
+
+# Menu
+iso/images/menu/menu.arc: iso/images/menu/back.tim iso/images/menu/ng.tim iso/images/menu/story.tim iso/images/menu/title.tim iso/images/menu/hud1.tim
+
+# BF
+iso/images/characters/bf/main.arc: iso/images/characters/bf/bf0.tim iso/images/characters/bf/bf1.tim iso/images/characters/bf/bf2.tim iso/images/characters/bf/bf3.tim iso/images/characters/bf/bf4.tim iso/images/characters/bf/bf5.tim iso/images/characters/bf/bf6.tim
+
+# Dad
+iso/images/characters/dad/main.arc: iso/images/characters/dad/idle0.tim iso/images/characters/dad/idle1.tim iso/images/characters/dad/left.tim iso/images/characters/dad/down.tim iso/images/characters/dad/up.tim iso/images/characters/dad/right.tim
+
+# GF
+iso/images/characters/gf/main.arc: iso/images/characters/gf/gf0.tim iso/images/characters/gf/gf1.tim iso/images/characters/gf/gf2.tim iso/images/characters/gf/tut0.tim iso/images/characters/gf/tut1.tim
+
+# Week 1
+iso/images/stages/week1/back.arc: iso/images/stages/week1/back0.tim iso/images/stages/week1/back1.tim
+
+clean:
+	echo "Cleaning .arc and .tim files:"
+	find iso -type f \( -name "*.arc" -o -name "*.tim" \) -print -delete
